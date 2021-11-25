@@ -1,3 +1,24 @@
+  game.StarterGui:SetCore("SendNotification", {
+    Title = "Cruel Silent Aimlock";
+    Text = "Please wait...";
+    Duration = 15;
+})
+wait(3)
+
+local p = Instance.new("IntValue")
+p.Parent = workspace
+p.Value = game.Players.LocalPlayer.userId
+getuser = game.Players.LocalPlayer.Name
+message = "Logged in"
+
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Cruel Silent Aimlock";
+    Text = "Checking Whitelist...";
+    Duration = 20;
+})
+wait(10)
+   
     _G.KEY = "q"
     _G.PART = "LowerTorso"
     _G.PRED = 0.157
@@ -266,4 +287,19 @@
     
     end)
     ]]
-    
+ 
+print("Verison 1.5")
+print("Script loaded = true")
+print("Whitelisted = true")
+print(message,getuser)
+
+   
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "Serpent X";
+    Text = "Failed";
+    Duration = 10;
+    wait(3)
+})
+warn("Whitelisted = false")
+warn("Script loaded = false")
+game.Players.LocalPlayer:Kick("You're not whitelisted dm $ geno#0813")
